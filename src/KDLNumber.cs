@@ -220,9 +220,9 @@ namespace KdlDotNet
         // derived classes must implement Equals and HashCode
     }
 
-    internal class KDLNumberInt32 : KDLNumber
+    public class KDLNumberInt32 : KDLNumber
     {
-        int Value { get; }
+        public int Value { get; }
 
         public KDLNumberInt32(int value, int radix, string? type) : base(radix, type)
             => Value = value;
@@ -244,9 +244,9 @@ namespace KdlDotNet
         }
     }
 
-    internal class KDLNumberInt64 : KDLNumber
+    public class KDLNumberInt64 : KDLNumber
     {
-        long Value { get; }
+        public long Value { get; }
 
         public KDLNumberInt64(long value, int radix, string? type) : base(radix, type)
             => Value = value;
@@ -268,10 +268,10 @@ namespace KdlDotNet
         }
     }
 
-    internal class KDLNumberDouble : KDLNumber
+    public class KDLNumberDouble : KDLNumber
     {
         KDLNumberParseFlags Flags { get; }
-        double Value { get; }
+        public double Value { get; }
 
         public KDLNumberDouble(double value, int radix, string? type) : this(value, KDLNumberParseFlags.None, radix, type)
         { }
@@ -310,9 +310,9 @@ namespace KdlDotNet
         }
     }
 
-    internal class KDLNumberBigInteger : KDLNumber
+    public class KDLNumberBigInteger : KDLNumber
     {
-        BigInteger Value { get; }
+        public BigInteger Value { get; }
 
         public KDLNumberBigInteger(BigInteger value, int radix, string? type) : base(radix, type)
             => Value = value;
